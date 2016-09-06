@@ -1,0 +1,131 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+body {
+    background: #40C0CB;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 300;
+    color: #333333;
+}
+
+a {
+    color: #00A8C6;
+    text-decoration: none;
+}
+
+#main {
+    width: 600px;
+    margin: 50px auto;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 100;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 100;
+}
+
+h3 {
+    font-weight: 100;
+    color: #8FBE00;
+    font-size: 32px;
+    border-bottom: 1px dashed #8d8d8d;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: #F9F2E7;
+    padding: 3em;
+    margin: 4em 0;
+    border: 1px solid #00A8C6;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.2em;
+    margin: 0 0 -0.75em 0;
+}
+
+strong {
+    font-weight: 400;
+}
+
+label.aligned {
+    display: inline-block;
+    width: 160px;
+}
+
+.highlighted {
+    background: #AEE239;
+    padding: 0 10px;
+}
+
+.option {
+    padding: 10px 0;
+}
+
+.option button {
+    border: 1px solid #8FBE00;
+    background: #AEE239;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.option button:disabled {
+    background: #CCCCCC;
+    color: #333333;
+}
+
+.option input[type="text"] {
+    padding: 5px 10px;
+    font-size: 100%;
+    color: #333333;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+    color: #999999;
+}
+
+#status {
+    position: absolute;
+    top: 120px;
+    padding: 5px 20px;
+    background: #AEE239;
+}

@@ -5,6 +5,24 @@
  */
 var isActiveHighlight = false;
 
+var backgroundColor = null;
+var textColor = null;
+var useBorder = false;
+var borderColor = null;
+
+chrome.storage.sync.get({
+    // Default values
+    backgroundColor: '#00BFFF',
+    textColor: '#FFFFFF',
+    useBorder: false,
+    borderColor: '#00688B'
+}, function (items) {
+    backgroundColor = items.backgroundColor;
+    textColor = items.textColor;
+    useBorder = items.useBorder;
+    borderColor = items.borderColor;
+});
+
 /**
  * Returns HTML code for highlighted span element
  *
@@ -13,7 +31,13 @@ var isActiveHighlight = false;
  * @returns {string}
  */
 function getHighlightedSpan(highlightedText) {
-    return '<span class="github-highlighter-marked">' + highlightedText + '</span>';
+    var style = "background-color: " + backgroundColor + ";";
+    style += "color: " + textColor + ";";
+    if (useBorder) {
+        style += "border: 1px solid " + borderColor + ";";
+    }
+
+    return '<span class="github-highlighter-marked" style="' + style + '">' + highlightedText + '</span>';
 }
 
 /**
@@ -21,9 +45,10 @@ function getHighlightedSpan(highlightedText) {
  */
 function addSimpleHighlight() {
     var highlightedText = window.getSelection().toString().trim();
+    var highlightedSpan = getHighlightedSpan(highlightedText);
     if (!isActiveHighlight && highlightedText) {
         $('table tr td').each(function (index) {
-            var newHTML = $(this).html().replace(highlightedText, getHighlightedSpan(highlightedText));
+            var newHTML = $(this).html().replace(highlightedText, highlightedSpan);
             $(this).html(newHTML);
         });
 

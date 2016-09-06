@@ -26,12 +26,21 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 ## Version History
 
+### 1.1.0
+
+* Added options page: 
+  * Background color
+  * Text color
+  * Use border flag
+  * Border color
+
 ### 1.0.0
+
 Initial (also known as The Glorious One).
 
 ---
 
 ## TODO and Wishlist
 
-* Settings page with custom highlight and text colors.
+* Settings page with fancy color-picker.
 * Go to next/previous occurrence.
