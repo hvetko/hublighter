@@ -1,6 +1,4 @@
 .github-highlighter-marked {
-    background-color: deepskyblue;
-    border: 1px solid dodgerblue;
     border-radius: 3px;
-    color: white;
+    padding: 2px 0 1px;
 }
