@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "HubLighter - GitHub Code Highlighter",
+  "description": "Highlight all selected code occurrences on any GitHub pull request or source page",
+  "version": "1.0.0",
+  "permissions": [
+    "https://github.com/"
+  ],
+  "homepage_url": "https://github.com/hvetko/hublighter",
+  "content_scripts": [
+    {
+      "css": [
+        "hublighter.css"
+      ],
+      "js": [
+        "jquery-3.1.0.min.js",
+        "content.js"
+      ],
+      "matches": [
+        "https://github.com/*"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "HubLighter - GitHub Code Highlighter"
+  }
+
+}
