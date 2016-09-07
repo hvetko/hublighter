@@ -45,11 +45,19 @@ function getHighlightedSpan(highlightedText) {
  */
 function addSimpleHighlight() {
     var highlightedText = window.getSelection().toString().trim();
+    var re = new RegExp(highlightedText, "g");
     var highlightedSpan = getHighlightedSpan(highlightedText);
     if (!isActiveHighlight && highlightedText) {
-        $('table tr td').each(function (index) {
-            var newHTML = $(this).html().replace(highlightedText, highlightedSpan);
-            $(this).html(newHTML);
+        $('table tr td.blob-code').each(function (index) {
+            var element = $(this);
+            if (element.text().includes(highlightedText)) {
+                var newHTML = element.html().replace(re, highlightedSpan);
+
+                if (element.html() !== newHTML) {
+                    element.html(newHTML);
+                    isActiveHighlight = true;
+                }
+            }
         });
 
         isActiveHighlight = true;
@@ -61,9 +69,13 @@ function addSimpleHighlight() {
  */
 function removeSimpleHighlight() {
     $('span.github-highlighter-marked').each(function (index) {
-        var highlightedText = $(this).html();
-        var newHTML = $(this).parent().html().replace(getHighlightedSpan(highlightedText), highlightedText);
-        $(this).parent().html(newHTML);
+        var element = $(this);
+        var highlightedText = element.html();
+        var re = new RegExp(getHighlightedSpan(highlightedText), "g");
+        if (element.parent().html()) {
+            var newHTML = element.parent().html().replace(re, highlightedText);
+            element.parent().html(newHTML);
+        }
     });
 
     isActiveHighlight = false;
