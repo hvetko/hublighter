@@ -11,6 +11,10 @@ Doesn't require any special permission and works on any GitHub project, even if 
 
 Finds and highlights any occurrence of selected text.
 
+Hublighter in action:
+
+![Hublighter in action](readme-hublighter-in-action.gif)
+
 ## How to use?
 
 1. Install extension in Chrome (duh, obviously).
