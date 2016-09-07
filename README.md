@@ -30,6 +30,14 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 ## Version History
 
+### 1.1.3
+
+* Fixing typos
+
+### 1.1.2
+
+* Speed and performance optimization
+
 ### 1.1.1
 
 * Reformat and polish
