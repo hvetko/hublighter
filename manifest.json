@@ -1,35 +1,35 @@
 {
-  "manifest_version": 2,
-  "name": "HubLighter - GitHub Code Highlighter",
-  "description": "Highlight all selected code occurrences on any GitHub pull request or source page",
-  "version": "1.1.0",
-  "permissions": [
-    "storage",
-    "https://github.com/"
-  ],
-  "homepage_url": "https://github.com/hvetko/hublighter",
+  "browser_action": {
+    "default_icon": "img/hublighter-128.png",
+    "default_title": "HubLighter - GitHub Code Highlighter"
+  },
   "content_scripts": [
     {
       "css": [
-        "hublighter.css"
+        "css/hublighter.css"
       ],
       "js": [
-        "jquery-3.1.0.min.js",
-        "content.js"
+        "js/jquery-3.1.0.min.js",
+        "js/content.js"
       ],
       "matches": [
         "https://github.com/*"
       ]
     }
   ],
-  "browser_action": {
-    "default_icon": "hublighter-16.png",
-    "default_title": "HubLighter - GitHub Code Highlighter"
-  },
+  "description": "Highlight all selected code occurrences on any GitHub pull request or source page",
+  "homepage_url": "https://github.com/hvetko/hublighter",
   "icons": {
-    "128": "hublighter-128.png",
-    "48": "hublighter-48.png",
-    "16": "hublighter-16.png"
+    "128": "img/hublighter-128.png",
+    "16": "img/hublighter-16.png",
+    "48": "img/hublighter-48.png"
   },
-  "options_page": "options.html"
+  "manifest_version": 2,
+  "name": "HubLighter - GitHub Code Highlighter",
+  "options_page": "html/options.html",
+  "permissions": [
+    "storage",
+    "https://github.com/"
+  ],
+  "version": "1.1.1"
 }

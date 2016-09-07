@@ -11,6 +11,10 @@ Doesn't require any special permission and works on any GitHub project, even if 
 
 Finds and highlights any occurrence of selected text.
 
+Hublighter in action:
+
+![Hublighter in action](readme-hublighter-in-action.gif)
+
 ## How to use?
 
 1. Install extension in Chrome (duh, obviously).
@@ -26,6 +30,10 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 ## Version History
 
+### 1.1.1
+
+* Reformat and polish
+
 ### 1.1.0
 
 * Added options page: 
@@ -35,7 +43,6 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
   * Border color
 
 ### 1.0.0
-
 Initial (also known as The Glorious One).
 
 ---
