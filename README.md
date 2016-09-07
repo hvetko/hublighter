@@ -26,6 +26,10 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 ## Version History
 
+### 1.1.1
+
+* Reformat and polish
+
 ### 1.1.0
 
 * Added options page: 
@@ -35,7 +39,6 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
   * Border color
 
 ### 1.0.0
-
 Initial (also known as The Glorious One).
 
 ---
