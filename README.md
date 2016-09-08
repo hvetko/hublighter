@@ -36,6 +36,7 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 #### 1.1.4
 
+* Popup
 * Bug fixes
 * Icon
 

@@ -36,5 +36,6 @@ function restoreOptions() {
         document.getElementById('border-color').value = items.borderColor;
     });
 }
+
 document.addEventListener('DOMContentLoaded', restoreOptions);
 document.getElementById('save').addEventListener('click', saveOptions);

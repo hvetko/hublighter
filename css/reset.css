@@ -24,7 +24,6 @@ html {
 }
 
 body {
-    background: #40C0CB;
     font-family: Roboto, Arial, sans-serif;
     font-weight: 300;
     color: #333333;
@@ -33,4 +32,10 @@ body {
 a {
     color: #00A8C6;
     text-decoration: none;
+}
+
+section {
+    background-color: #F9F2E7;
+
+    border: 1px solid #00A8C6;
 }
