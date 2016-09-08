@@ -1,11 +1,15 @@
 # HubLighter - The GitHub Code Highlighter
 
-Simple extension to help with GitHub code reviews.
+Simple extension for Google Chrome to help with GitHub code reviews.
 
 Having trouble finding code occurrences in new code while checking pull request? 
 Highlight variable/function/anything and all occurrences will be highlighted for easier tracking. 
 
 Doesn't require any special permission and works on any GitHub project, even if you are not logged in into GitHub account.
+
+## Install
+
+Install current version from [Chrome Web Store](https://chrome.google.com/webstore/detail/hublighter-github-code-hi/lglodolklpafcnjeaphjdijmfbmikkgn).
 
 ## What it Does?
 
@@ -30,19 +34,24 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 ## Version History
 
-### 1.1.3
+#### 1.1.4
+
+* Bug fixes
+* Icon
+
+#### 1.1.3
 
 * Fixing typos
 
-### 1.1.2
+#### 1.1.2
 
 * Speed and performance optimization
 
-### 1.1.1
+#### 1.1.1
 
 * Reformat and polish
 
-### 1.1.0
+#### 1.1.0
 
 * Added options page: 
   * Background color
@@ -51,11 +60,13 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
   * Border color
 
 ### 1.0.0
-Initial (also known as The Glorious One).
+
+* Initial (also known as _"The Glorious One"_).
 
 ---
 
 ## TODO and Wishlist
 
-* Settings page with fancy color-picker.
+* Options page with fancy color-picker.
 * Go to next/previous occurrence.
+* Fix the bug with selecting HTML tag codes or special characters
