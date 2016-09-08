@@ -1,6 +1,6 @@
 {
   "browser_action": {
-    "default_icon": "img/hublighter-128.png",
+    "default_icon": "img/hublighter-16.png",
     "default_title": "HubLighter - GitHub Code Highlighter"
   },
   "content_scripts": [
