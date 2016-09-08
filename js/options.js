@@ -19,6 +19,9 @@ function saveOptions() {
     });
 }
 
+/**
+ * Restore values from storage or take the default ones
+ */
 function restoreOptions() {
     chrome.storage.sync.get({
         // Default values
