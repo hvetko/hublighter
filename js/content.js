@@ -10,6 +10,9 @@ var textColor = null;
 var useBorder = false;
 var borderColor = null;
 
+/**
+ * Get storage values
+ */
 chrome.storage.sync.get({
     // Default values
     backgroundColor: '#00BFFF',
@@ -31,8 +34,8 @@ chrome.storage.sync.get({
  * @returns {string}
  */
 function getHighlightedSpan(highlightedText) {
-    var style = "background-color: " + backgroundColor + ";";
-    style += "color: " + textColor + ";";
+    var style = "background-color: " + backgroundColor + "; color: " + textColor + ";";
+
     if (useBorder) {
         style += "border: 1px solid " + borderColor + ";";
     }
@@ -47,16 +50,22 @@ function addSimpleHighlight() {
     var highlightedText = window.getSelection().toString().trim();
     var re = new RegExp(highlightedText, "g");
     var highlightedSpan = getHighlightedSpan(highlightedText);
-    if (!isActiveHighlight && highlightedText) {
-        $('table tr td.blob-code').each(function (index) {
-            var element = $(this);
-            if (element.text().includes(highlightedText)) {
-                var newHTML = element.html().replace(re, highlightedSpan);
 
-                if (element.html() !== newHTML) {
-                    element.html(newHTML);
-                    isActiveHighlight = true;
-                }
+    if (!isActiveHighlight && highlightedText) {
+        $('table tr td.blob-code').each(function () {
+            var element = $(this);
+
+            if (element.text().includes(highlightedText) && element.html().includes(highlightedText)) {
+                // Replace only within visible span
+                element.children().each(function () {
+                    var child = $(this);
+                    if (child.hasClass('blob-code-inner')) {
+                        var childHTML = child.html().replace(re, highlightedSpan);
+                        if (child.html() !== childHTML) {
+                            child.html(childHTML);
+                        }
+                    }
+                });
             }
         });
 
@@ -68,10 +77,11 @@ function addSimpleHighlight() {
  * Removes highlight from the page and add new one if needed
  */
 function removeSimpleHighlight() {
-    $('span.github-highlighter-marked').each(function (index) {
+    $('span.github-highlighter-marked').each(function () {
         var element = $(this);
         var highlightedText = element.html();
         var re = new RegExp(getHighlightedSpan(highlightedText), "g");
+
         if (element.parent().html()) {
             var newHTML = element.parent().html().replace(re, highlightedText);
             element.parent().html(newHTML);
@@ -82,7 +92,7 @@ function removeSimpleHighlight() {
 }
 
 
-$('body').click(function (event) {
+$('body').click(function () {
     addSimpleHighlight();
 }).dblclick(function () {
     removeSimpleHighlight();
