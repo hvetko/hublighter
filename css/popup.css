@@ -1,35 +1,35 @@
 #main {
-    width: 200px;
-    padding: 15px;
+	width: 200px;
+	padding: 15px;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 100;
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: 100;
 }
 
 footer {
-    text-align: right;
-    border-top: 1px solid #CCCCCC;
-    padding-top: 15px;
-    margin-top: 15px;
-    font-size: 80%;
+	text-align: right;
+	border-top: 1px solid #CCCCCC;
+	padding-top: 15px;
+	margin-top: 15px;
+	font-size: 80%;
 }
 
 p {
-    padding: 2px 0;
+	padding: 2px 0;
 }
 
 .link {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .color-box {
-    display: inline-block;
-    float: right;
-    width: 14px;
-    height: 14px;
-    border: 1px solid #333333;
+	display: inline-block;
+	float: right;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #333333;
 }

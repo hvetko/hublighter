@@ -1,96 +1,96 @@
 body {
-    background: #40C0CB;
+	background: #40C0CB;
 }
 
 #main {
-    width: 600px;
-    margin: 50px auto;
+	width: 600px;
+	margin: 50px auto;
 }
 
 h1 {
-    color: #ffffff;
-    font-size: 48px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 100;
+	color: #ffffff;
+	font-size: 48px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: 100;
 }
 
 h2 {
-    color: #ffffff;
-    font-size: 32px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 100;
+	color: #ffffff;
+	font-size: 32px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: 100;
 }
 
 h3 {
-    font-weight: 100;
-    color: #8FBE00;
-    font-size: 32px;
-    border-bottom: 1px dashed #8d8d8d;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+	font-weight: 100;
+	color: #8FBE00;
+	font-size: 32px;
+	border-bottom: 1px dashed #8d8d8d;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 section {
-    padding: 3em;
-    margin: 4em 0;
+	padding: 3em;
+	margin: 4em 0;
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.2em;
-    margin: 0 0 -0.75em 0;
+	font-size: 16px;
+	line-height: 1.2em;
+	margin: 0 0 -0.75em 0;
 }
 
 strong {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 label.aligned {
-    display: inline-block;
-    width: 160px;
+	display: inline-block;
+	width: 160px;
 }
 
 .highlighted {
-    background: #AEE239;
-    padding: 0 10px;
+	background: #AEE239;
+	padding: 0 10px;
 }
 
 .option {
-    padding: 10px 0;
+	padding: 10px 0;
 }
 
 .option button {
-    border: 1px solid #8FBE00;
-    background: #AEE239;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    font-size: 16px;
+	border: 1px solid #8FBE00;
+	background: #AEE239;
+	color: #FFFFFF;
+	padding: 10px 20px;
+	font-size: 16px;
 }
 
 .option button:disabled {
-    background: #CCCCCC;
-    color: #333333;
+	background: #CCCCCC;
+	color: #333333;
 }
 
 .option input[type="text"] {
-    padding: 5px 10px;
-    font-size: 100%;
-    color: #333333;
+	padding: 5px 10px;
+	font-size: 100%;
+	color: #333333;
 }
 
 sup {
-    vertical-align: super;
-    font-size: smaller;
-    color: #999999;
+	vertical-align: super;
+	font-size: smaller;
+	color: #999999;
 }
 
 #status {
-    position: absolute;
-    top: 120px;
-    padding: 5px 20px;
-    background: #AEE239;
+	position: absolute;
+	top: 120px;
+	padding: 5px 20px;
+	background: #AEE239;
 }
