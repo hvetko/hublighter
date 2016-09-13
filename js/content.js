@@ -44,11 +44,23 @@ function getHighlightedSpan(highlightedText) {
 }
 
 /**
+ * Escape Regex special characters
+ *
+ * @param text
+ * @returns {string|void|XML}
+ */
+function escapeCodes(text) {
+	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+}
+
+/**
  * Adds highlight to selection
  */
 function addSimpleHighlight() {
 	var highlightedText = window.getSelection().toString().trim();
-	var re = new RegExp(highlightedText, "g");
+	highlightedTextEscaped = escapeCodes(highlightedText);
+
+	var re = new RegExp(highlightedTextEscaped, "g");
 	var highlightedSpan = getHighlightedSpan(highlightedText);
 
 	if (!isActiveHighlight && highlightedText) {

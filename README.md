@@ -34,6 +34,10 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 ## Version History
 
+### 1.1.5
+
+* Escaping Regex
+
 #### 1.1.4
 
 * Popup
