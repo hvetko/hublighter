@@ -11,31 +11,31 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
 }
 
 html {
-    line-height: 1;
+	line-height: 1;
 }
 
 body {
-    font-family: Roboto, Arial, sans-serif;
-    font-weight: 300;
-    color: #333333;
+	font-family: Roboto, Arial, sans-serif;
+	font-weight: 300;
+	color: #333333;
 }
 
 a {
-    color: #00A8C6;
-    text-decoration: none;
+	color: #00A8C6;
+	text-decoration: none;
 }
 
 section {
-    background-color: #F9F2E7;
+	background-color: #F9F2E7;
 
-    border: 1px solid #00A8C6;
+	border: 1px solid #00A8C6;
 }

@@ -34,6 +34,14 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 ## Version History
 
+### 1.2.0
+
+* HTML code highlight bug fix
+
+### 1.1.5
+
+* Escaping Regex
+
 #### 1.1.4
 
 * Popup
@@ -68,6 +76,4 @@ _Code Highlighter for GitHub_ extension is not endorsed by, sponsored by, or aff
 
 ## TODO and Wishlist
 
-* Options page with fancy color-picker.
 * Go to next/previous occurrence.
-* Fix the bug with selecting HTML tag codes or special characters
