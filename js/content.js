@@ -27,9 +27,22 @@ chrome.storage.sync.get({
 });
 
 /**
+ * Replace all substring occurrences
+ *
+ * @param search
+ * @param replacement
+ *
+ * @returns {string}
+ */
+String.prototype.replaceAll = function (search, replacement) {
+	var target = this;
+	return target.replace(new RegExp(escapeCodes(search), 'g'), replacement);
+};
+
+/**
  * Returns HTML code for highlighted span element
  *
- * @param highlightedText
+ * @param {string} highlightedText
  *
  * @returns {string}
  */
@@ -44,6 +57,27 @@ function getHighlightedSpan(highlightedText) {
 }
 
 /**
+ *
+ * @param {string} highlightedText
+ *
+ * @returns {string}
+ */
+function getHublightHash(highlightedText) {
+	String.prototype.hashCode = function () {
+		var hash = 0, i, chr;
+		if (this.length === 0) return hash;
+		for (i = 0; i < this.length; i++) {
+			chr = this.charCodeAt(i);
+			hash = ((hash << 5) - hash) + chr;
+			hash |= 0; // Convert to 32bit integer
+		}
+		return 'HUBLIGHTER' + Math.abs(hash);
+	};
+
+	return highlightedText.hashCode();
+}
+
+/**
  * Escape Regex special characters
  *
  * @param text
@@ -55,36 +89,58 @@ function escapeCodes(text) {
 
 /**
  * Adds highlight to selection
+ * It's a two-step process. First the selected string is replaced with hash.
+ * Then, the hash is replaced with html highlighting
  */
 function addSimpleHighlight() {
 	var highlightedText = window.getSelection().toString().trim();
 
 	if (!isActiveHighlight && highlightedText) {
 		var blobCodeTds = $('table tr td.blob-code');
+		doHashing(blobCodeTds, highlightedText);
 		doHublighting(blobCodeTds, highlightedText);
-
-		blobCodeTds.each(function () {
-			var htmlCodes = $(this).html();
-			var newHtml = htmlCodes.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-			$(this).html(newHtml);
-		});
 
 		isActiveHighlight = true;
 	}
 }
 
-function doHublighting(elem, highlightedText) {
-	var highlightedSpan = getHighlightedSpan(highlightedText);
+/**
+ * Replaces selected string with hash
+ *
+ * @param elem
+ * @param highlightedText
+ */
+function doHashing(elem, highlightedText) {
+	var highlightedHash = getHublightHash(highlightedText);
 
 	elem.contents().filter(function () {
 		return this.nodeType === 3 && this.textContent.indexOf(highlightedText) >= 0
 	}).each(function () {
-		this.textContent = this.textContent.replace(highlightedText, highlightedSpan);
+		this.textContent = this.textContent.replaceAll(highlightedText, highlightedHash);
 	});
 
 	elem.children().each(function () {
 		if ($(this).text().includes(highlightedText)) {
-			doHublighting($(this), highlightedText);
+			doHashing($(this), highlightedText);
+		}
+	});
+}
+
+/**
+ * Replaces hash with highlight
+ *
+ * @param elem
+ * @param highlightedText
+ */
+function doHublighting(elem, highlightedText) {
+	var highlightedHash = getHublightHash(highlightedText);
+	var highlightedSpan = getHighlightedSpan(highlightedText);
+
+	elem.each(function () {
+		if ($(this).text().indexOf(highlightedHash) >= 0) {
+			var hashedHTML = $(this).html();
+			var hublightedHtml = hashedHTML.replaceAll(highlightedHash, highlightedSpan);
+			$(this).html(hublightedHtml);
 		}
 	});
 }
